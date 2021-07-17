@@ -1,0 +1,26 @@
+{
+  "name": "11ty-nunjucks-globals",
+  "description": "Experimenting with the new Eleventy 1.x addNunjucksGlobal API.",
+  "version": "1.0.0",
+  "author": "Peter deHaan",
+  "bugs": {
+    "url": "https://github.com/pdehaan/11ty-nunjucks-globals/issues"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0-canary.39"
+  },
+  "devDependencies": {},
+  "homepage": "https://github.com/pdehaan/11ty-nunjucks-globals#readme",
+  "keywords": [],
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pdehaan/11ty-nunjucks-globals.git"
+  },
+  "scripts": {
+    "build": "NODE_ENV=development eleventy",
+    "build:prod": "NODE_ENV=production eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

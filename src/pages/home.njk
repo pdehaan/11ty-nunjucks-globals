@@ -1,0 +1,23 @@
+---
+title: HOME
+permalink: /
+---
+
+Powered by Nunjucks v{{ nunjucksVersion() }};
+
+<!-- defaults -->
+{#- Find the process.env.NODE_ENV or fall back to a default. #}
+NODE_ENV={{ env("NODE_ENV") or "development" }}
+{#- Find the process.env.NODE_ENV, or fall back to the process.env.ELEVENTY_ENV, then fall back to a default. #}
+NODE_ENV={{ env("NODE_ENV") or env("ELEVENTY_ENV") or "development" }}
+{#- Find the process.env.ELEVENTY_ENV or fall back to a default using the `default` filter. #}
+ELEVENTY_ENV={{ env("ELEVENTY_ENV") | default('DeVeLoPmEnT') }}
+{#- Find the process.env.ELEVENTY_ENV and supply a default value. #}
+ELEVENTY_ENV={{ env("ELEVENTY_ENV", "development") }}
+
+<h2>sync</h2>
+syncFn={{ syncFn(1, 3) }} {# output: 4 #}
+
+<h2>async</h2>
+asyncFn={{ asyncFn(2, 5) }} {# output: [object Promise] #}
+asyncFn={{ asyncFn(3, 7) | resolve }} {# output: 10 #}
